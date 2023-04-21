@@ -1,0 +1,77 @@
+---
+title: 'VIVES Rmarkdown Slides'
+author: "Yves Sagaert"
+output:
+  beamer_presentation:
+    includes:
+      in_header: ystyle.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\section{Introduction}
+![Source: research](images/minionresearch.jpg) <!-- source here -->
+
+## Intro on slide
+
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+    - Subitem 1
+    - Subitem 2
+
+## Slide 2
+
+- All 
+- Is
+- Good
+
+\section{Program}
+
+## Program
+We will be using R:
+
+- [R engine](https://cran.r-project.org/bin/windows/base/)
+- [RStudio GUI](https://www.rstudio.com/products/rstudio/download/)
+
+## Some easy code
+Make a txt file on the C disk with the name "test.R" and content:
+
+```{r, eval=FALSE, echo=TRUE}
+print("Hello World !")
+for (i in 1:10){
+  if (i%%2==0){
+    print(paste0("This is line ",i,"."))
+  }
+}
+```
+
+## 
+
+Start in the terminal:
+
+- ga naar: C:\\Program Files\\R\\R-4.0.3\\bin
+- typ R
+
+\vspace*{0.2cm}
+
+You will now see the R console ">"
+
+- Use getwd() 
+- Use setwd("C:/") 
+- Use source("test.R") 
+- What do you see?
+- Use q() to exit
+
+
+\section{Questions}
+
+## Questions ?
+
+\begin{alertblock}{Yves Sagaert}
+  john.doe@vives.be
+\end{alertblock}
+

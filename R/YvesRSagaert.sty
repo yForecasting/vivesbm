@@ -1,0 +1,28 @@
+% Figure placement using textpos
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\def\placefig#1#2#3#4{\begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}\end{textblock}}
+
+
+\def\maxwidth{11.5cm}
+\def\maxheight{8cm}
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\def\fullwidth#1{\vspace*{-0.2cm}\par\centerline{\includegraphics[width=20cm]{#1}}}
+\def\fullheight#1{\vspace*{-0.2cm}\par\centerline{\includegraphics[height=12cm]{#1}}}
+
+% Clever right hand placement
+\newcommand*{\atright}[1]{{%
+  \unskip\nobreak\hfill\penalty50
+  \hskip2em\hbox{}\nobreak\hfill#1
+  \parfillskip=0pt\finalhyphendemerits=0\par}}
+  
+% Fix dates
+\usepackage[no-weekday]{eukdate}
+
+
